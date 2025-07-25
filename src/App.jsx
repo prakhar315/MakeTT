@@ -281,9 +281,15 @@ function App() {
 
   return (
     <div className="container">
+      <div className="floating-elements">
+        <div className="floating-circle"></div>
+        <div className="floating-circle"></div>
+        <div className="floating-circle"></div>
+      </div>
+
       <div className="header">
-        <h1>📅 Time Table Maker</h1>
-        <p>Create schedules • Track streaks • Build habits</p>
+        <h1>✨ MakeTT - Time Table Maker</h1>
+        <p>Create your perfect weekly schedule with streak tracking</p>
       </div>
 
       <div className="controls">
