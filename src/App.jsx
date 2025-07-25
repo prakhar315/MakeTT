@@ -21,7 +21,13 @@ import {
 } from './utils/dataManager'
 
 const DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-const DEFAULT_TIME_SLOTS = ['9:00 AM', '11:00 AM', '1:00 PM', '3:00 PM', '5:00 PM']
+const DEFAULT_TIME_SLOTS = [
+  '9:00 AM - 11:00 AM',
+  '11:00 AM - 1:00 PM',
+  '1:00 PM - 3:00 PM',
+  '3:00 PM - 5:00 PM',
+  '5:00 PM - 7:00 PM'
+]
 
 function App() {
   const [timetable, setTimetable] = useState({})
@@ -152,7 +158,7 @@ function App() {
   }
 
   const addTimeSlot = () => {
-    const newTime = prompt('Enter new time slot (e.g., "11:30 PM"):')
+    const newTime = prompt('Enter new time slot range (e.g., "7:00 PM - 9:00 PM"):')
     if (newTime && newTime.trim() && !timeSlots.includes(newTime.trim())) {
       const newTimeSlots = [...timeSlots, newTime.trim()]
       setTimeSlots(newTimeSlots)

@@ -157,7 +157,13 @@ export const saveAllData = (data) => {
 
     saveToStorage(STORAGE_KEYS.TIMETABLE, timetable || {})
     saveToStorage(STORAGE_KEYS.STREAKS, streaks || {})
-    saveToStorage(STORAGE_KEYS.TIME_SLOTS, timeSlots || ['9:00 AM', '11:00 AM', '1:00 PM', '3:00 PM', '5:00 PM'])
+    saveToStorage(STORAGE_KEYS.TIME_SLOTS, timeSlots || [
+      '9:00 AM - 11:00 AM',
+      '11:00 AM - 1:00 PM',
+      '1:00 PM - 3:00 PM',
+      '3:00 PM - 5:00 PM',
+      '5:00 PM - 7:00 PM'
+    ])
     saveToStorage(STORAGE_KEYS.THEME, theme || false)
 
     // Create automatic backup
@@ -176,7 +182,13 @@ export const loadAllData = () => {
     return {
       timetable: loadFromStorage(STORAGE_KEYS.TIMETABLE, {}),
       streaks: loadFromStorage(STORAGE_KEYS.STREAKS, {}),
-      timeSlots: loadFromStorage(STORAGE_KEYS.TIME_SLOTS, ['9:00 AM', '11:00 AM', '1:00 PM', '3:00 PM', '5:00 PM']),
+      timeSlots: loadFromStorage(STORAGE_KEYS.TIME_SLOTS, [
+        '9:00 AM - 11:00 AM',
+        '11:00 AM - 1:00 PM',
+        '1:00 PM - 3:00 PM',
+        '3:00 PM - 5:00 PM',
+        '5:00 PM - 7:00 PM'
+      ]),
       theme: loadFromStorage(STORAGE_KEYS.THEME, false),
       lastSave: loadFromStorage(STORAGE_KEYS.LAST_SAVE, null)
     }
@@ -185,7 +197,13 @@ export const loadAllData = () => {
     return {
       timetable: {},
       streaks: {},
-      timeSlots: ['9:00 AM', '11:00 AM', '1:00 PM', '3:00 PM', '5:00 PM'],
+      timeSlots: [
+        '9:00 AM - 11:00 AM',
+        '11:00 AM - 1:00 PM',
+        '1:00 PM - 3:00 PM',
+        '3:00 PM - 5:00 PM',
+        '5:00 PM - 7:00 PM'
+      ],
       theme: false,
       lastSave: null
     }

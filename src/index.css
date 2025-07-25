@@ -331,7 +331,7 @@ body.dark .subject-input::placeholder {
   color: white;
   cursor: pointer;
   position: relative;
-  padding: 0;
+  padding: 8px 4px;
   text-align: center;
   border-radius: 0;
   width: 100%;
@@ -342,10 +342,24 @@ body.dark .subject-input::placeholder {
   white-space: nowrap;
   overflow: hidden;
   transition: all 0.2s ease;
+  font-size: 0.8rem;
+  line-height: 1.2;
 }
 
 .time-slot-header:hover {
-  background: rgba(255, 255, 255, 0.1) !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  transform: scale(1.02);
+}
+
+.time-slot-header.editing {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.time-text {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .time-slot-header .delete-time {
